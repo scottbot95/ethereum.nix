@@ -12,6 +12,7 @@
     inputs',
     pkgs,
     system,
+    inputs',
     ...
   }: let
     inherit (pkgs) callPackage;
@@ -31,6 +32,7 @@
       geth = callPackage ./clients/execution/geth {};
       geth-sealer = callPackage ./clients/execution/geth-sealer {};
       nethermind = callPackage ./clients/execution/nethermind {};
+      reth = callPackageUnstable ./clients/execution/reth {};
 
       # Signers
       web3signer = callPackage ./signers/web3signer {};
@@ -102,6 +104,7 @@
       # execution clients
       besu.bin = "besu";
       erigon.bin = "erigon";
+      reth.bin = "reth";
 
       geth = {
         bin = "geth";
