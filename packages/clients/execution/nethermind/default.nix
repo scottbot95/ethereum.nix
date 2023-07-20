@@ -49,7 +49,7 @@
     dotnet-sdk = dotnetCorePackages.sdk_7_0;
     dotnet-runtime = dotnetCorePackages.aspnetcore_7_0;
 
-    passthru = rec {
+    passthru = {
       # buildDotnetModule's `fetch-deps` uses `writeShellScript` instead of writeShellScriptBin making nix run .#nethermind.fetch-deps command to fail
       # This alias solves that issue. On parent folder, we only need to run this command to produce a new nuget-deps.nix file with updated deps:
       # $ nix run .#nethermind.fetch-nethermind-deps $PRJ_ROOT/packages/clients/execution/nethermind/nuget-deps.nix
