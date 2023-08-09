@@ -12,7 +12,6 @@
     inputs',
     pkgs,
     system,
-    inputs',
     ...
   }: let
     inherit (pkgs) callPackage;
