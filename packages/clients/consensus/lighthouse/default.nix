@@ -25,13 +25,13 @@
 in
   rustPlatform.buildRustPackage rec {
     pname = "lighthouse";
-    version = "4.5.0";
+    version = "4.5.222-exp";
 
     src = fetchFromGitHub {
       owner = "sigp";
       repo = pname;
       rev = "v${version}";
-      hash = "sha256-UUOvTxOQXT1zfhDYEL/J6moHAyejZn7GyGS/XBmXxRQ=";
+      hash = "sha256-y5xV9zKeWjy/tEol0ofO3hDCJF1HnMh94szoeglud2Q=";
     };
 
     cargoSha256 = "sha256-KlTQF1iL2PYAk+nmQIm72guy2PxGkN/YzhgCNv1FZGM=";
@@ -45,8 +45,10 @@ in
         "libmdbx-0.1.4" = "sha256-NMsR/Wl1JIj+YFPyeMMkrJFfoS07iEAKEQawO89a+/Q=";
         "lmdb-rkv-0.14.0" = "sha256-sxmguwqqcyOlfXOZogVz1OLxfJPo+Q0+UjkROkbbOCk=";
         "mev-rs-0.3.0" = "sha256-LCO0GTvWTLcbPt7qaSlLwlKmAjt3CIHVYTT/JRXpMEo=";
+        "milhouse-0.1.0" = "sha256-81KmkTcHgeiYrYwopYF53pyxUIH/YB036gMATeln1ZY=";
         "testcontainers-0.14.0" = "sha256-mSsp21G7MLEtFROWy88Et5s07PO0tjezovCGIMh+/oQ=";
         "warp-0.3.5" = "sha256-d5e6ASdL7+Dl3KsTNOb9B5RHpStrupOKsbGWsdu9Jfk=";
+        "xdelta3-0.1.5" = "sha256-0QG5wLoJhrxVmfbDXb8SFOoJhcg9P9PVJANYOKr4lTk=";
       };
     };
 
